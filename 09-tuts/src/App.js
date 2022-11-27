@@ -10,7 +10,7 @@ function App() {
   const shoppingList = localStorage.getItem('shopping-list')
 	// State
 	const [items, setItems] = useState(
-		shoppingList ? JSON.parse(shoppingList) : localStorage.setItem('shopping-lista', JSON.stringify([]))
+		shoppingList ? JSON.parse(shoppingList) : localStorage.setItem('shopping-list', JSON.stringify([]))
    
 	)
 	const [newItem, setNewItem] = useState('')
