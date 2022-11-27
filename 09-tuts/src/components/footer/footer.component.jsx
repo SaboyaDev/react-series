@@ -1,8 +1,6 @@
 import './footer.styles.css'
 
 const Footer = ({ length }) => {
-	const today = new Date()
-
 	return (
 		<footer>
 			<p>
