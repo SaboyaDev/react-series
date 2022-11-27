@@ -6,9 +6,12 @@ import Footer from './components/footer/footer.component'
 import { useState } from 'react'
 
 function App() {
+  // Local Storage List
+  const shoppingList = localStorage.getItem('shopping-list')
 	// State
 	const [items, setItems] = useState(
-		JSON.parse(localStorage.getItem('shopping-list'))
+		shoppingList ? JSON.parse(shoppingList) : localStorage.setItem('shopping-lista', JSON.stringify([]))
+   
 	)
 	const [newItem, setNewItem] = useState('')
 	const [search, setSearch] = useState('')
